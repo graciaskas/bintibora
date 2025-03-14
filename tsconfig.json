@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {},
+  "extends": "expo/tsconfig.base",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "nativewind-env.d.ts",
+    "constants/colors.js",
+    "hooks/useColorScheme.js",
+    "hooks/useColorScheme.web.js",
+    "hooks/useThemeColor.js",
+    "components/ThemedView.jsx",
+    "components/ThemedText.jsx"
+  ]
+}

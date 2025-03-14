@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "e_natid": "5-910-N58968C",
+    "e_import": "A2290953M",
+    "e_import_export": "0029/BWX-20/I001953NK/Z",
+    "e_rccm": "CD/GOM/RCCM/19-B-080",
+    "e_name": "Gracias Kasongo",
+    "gender": "male",
+    "e_province": "Nord Kivu",
+    "e_city": "Beni",
+    "e_commune": "Beu"
+  },
+  {
+    "id": 2,
+    "e_natid": "5-910-N58968C",
+    "e_import": "A2290953M",
+    "e_import_export": "0029/BWX-20/I001953NK/Z",
+    "e_rccm": "CD/GOM/RCCM/19-B-080",
+    "e_name": "Blaise Batunji",
+    "gender": "male",
+    "e_province": "Nord Kivu",
+    "e_city": "Beni",
+    "e_commune": "Beu"
+  },
+  {
+    "id": 3,
+    "e_natid": "5-910-N58968C",
+    "e_import": "A2290953M",
+    "e_import_export": "0029/BWX-20/I001953NK/Z",
+    "e_rccm": "CD/GOM/RCCM/19-B-080",
+    "e_name": "Amisi Ramazani",
+    "gender": "male",
+    "e_province": "Nord Kivu",
+    "e_city": "Beni",
+    "e_commune": "Beu"
+  },
+  {
+    "id": 4,
+    "e_natid": "5-910-N58968C",
+    "e_import": "A2290953M",
+    "e_import_export": "0029/BWX-20/I001953NK/Z",
+    "e_rccm": "CD/GOM/RCCM/19-B-080",
+    "e_name": "Dany Mapathi",
+    "gender": "male",
+    "e_province": "Nord Kivu",
+    "e_city": "Beni",
+    "e_commune": "Beu"
+  },
+  {
+    "id": 5,
+    "e_natid": "5-910-N58968C",
+    "e_import": "A2290953M",
+    "e_import_export": "0029/BWX-20/I001953NK/Z",
+    "e_rccm": "CD/GOM/RCCM/19-B-080",
+    "e_name": "THINA KASONGO",
+    "gender": "male",
+    "e_province": "Nord Kivu",
+    "e_city": "Beni",
+    "e_commune": "Beu"
+  },
+  {
+    "id": 6,
+    "e_natid": "5-910-N58968C",
+    "e_import": "A2290953M",
+    "e_import_export": "0029/BWX-20/I001953NK/Z",
+    "e_rccm": "CD/GOM/RCCM/19-B-080",
+    "e_name": "EMILE RUZUZI",
+    "gender": "male",
+    "e_province": "Nord Kivu",
+    "e_city": "Beni",
+    "e_commune": "Beu"
+  },
+  {
+    "id": 7,
+    "e_natid": "5-910-N58968C",
+    "e_import": "A2290953M",
+    "e_import_export": "0029/BWX-20/I001953NK/Z",
+    "e_rccm": "CD/GOM/RCCM/19-B-080",
+    "e_name": "FELICIEN SAMVURA",
+    "gender": "male",
+    "e_province": "Nord Kivu",
+    "e_city": "Beni",
+    "e_commune": "Beu"
+  },
+  {
+    "id": 8,
+    "e_natid": "5-910-N58968C",
+    "e_import": "A2290953M",
+    "e_import_export": "0029/BWX-20/I001953NK/Z",
+    "e_rccm": "CD/GOM/RCCM/19-B-080",
+    "e_name": "SHWARI MAONERO",
+    "gender": "male",
+    "e_province": "Nord Kivu",
+    "e_city": "Beni",
+    "e_commune": "Beu"
+  },
+  {
+    "id": 9,
+    "e_natid": "5-910-N58968C",
+    "e_import": "A2290953M",
+    "e_import_export": "0029/BWX-20/I001953NK/Z",
+    "e_rccm": "CD/GOM/RCCM/19-B-080",
+    "e_name": "KASONGO TAMBWE Junior",
+    "gender": "male",
+    "e_province": "Nord Kivu",
+    "e_city": "Beni",
+    "e_commune": "Beu"
+  },
+  {
+    "id": 10,
+    "e_natid": "5-910-N58968C",
+    "e_import": "A2290953M",
+    "e_import_export": "0029/BWX-20/I001953NK/Z",
+    "e_rccm": "CD/GOM/RCCM/19-B-080",
+    "e_name": "OBEDI SHAKO",
+    "gender": "male",
+    "e_province": "Nord Kivu",
+    "e_city": "Beni",
+    "e_commune": "Beu"
+  }
+]
