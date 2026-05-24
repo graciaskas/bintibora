@@ -56,7 +56,7 @@ const FormField = ({
           </TouchableOpacity>
         )}
 
-        {(props.type == "date") & props.editable && (
+        {(props.type == "date") && props.editable && (
           <TouchableOpacity onPress={showDatePicker}>
             <Ionicons name="calendar-number-outline" size={24} color={"#aaa"} />
             <DateTimePickerModal

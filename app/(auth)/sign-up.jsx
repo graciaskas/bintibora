@@ -1,5 +1,18 @@
-import { View, Text, ScrollView, Image, Dimensions, Alert } from "react-native";
+import { countries } from "../../constants/countries";
+import FormFieldSelection from "../../components/FormFieldSelection";
+import {
+  View,
+  Text,
+  ScrollView,
+  Image,
+  Dimensions,
+  Alert,
+  Platform,
+} from "react-native";
 import React, { useState } from "react";
+import * as Google from "expo-auth-session/providers/google";
+import * as WebBrowser from "expo-web-browser";
+WebBrowser.maybeCompleteAuthSession();
 import { SafeAreaView } from "react-native-safe-area-context";
 import images from "../../constants/images";
 import FormField from "../../components/FormField";
@@ -8,6 +21,7 @@ import { Link, Redirect, router } from "expo-router";
 
 import User from "../../lib/api/users";
 import { useGlobalContext } from "../../context/GlobalProvider";
+import { StatusBar } from "expo-status-bar";
 
 const user = new User();
 
@@ -18,9 +32,27 @@ const SignUp = () => {
     password: null,
     name: null,
     phone: null,
+    country: null,
   });
 
   const [isSubmitting, setSubmitting] = useState(false);
+
+  // Auth Google
+  const [request, response, promptAsync] = Google.useAuthRequest({
+    expoClientId: "YOUR_EXPO_CLIENT_ID",
+    iosClientId: "YOUR_IOS_CLIENT_ID",
+    androidClientId: "YOUR_ANDROID_CLIENT_ID",
+    webClientId: "YOUR_WEB_CLIENT_ID",
+  });
+
+  React.useEffect(() => {
+    if (response?.type === "success") {
+      const { authentication } = response;
+      // Ici, tu peux envoyer le token à ton backend pour créer/associer le compte
+      Alert.alert("Connexion Google réussie", JSON.stringify(authentication));
+      // Exemple: user.create({ provider: 'google', token: authentication.accessToken })
+    }
+  }, [response]);
 
   if (!loading && isLogged) return <Redirect href="/dashboard" />;
 
@@ -29,7 +61,7 @@ const SignUp = () => {
     if (!form.name || !form.email || !form.password) {
       Alert.alert(
         "Formulaire incorrecte !",
-        "Veuillez remplir tous les champs du formulaire..."
+        "Veuillez remplir tous les champs du formulaire...",
       );
       return setSubmitting(false);
     }
@@ -42,7 +74,7 @@ const SignUp = () => {
       } else {
         Alert.alert(
           "Votre compte a été crée avec succes !",
-          `Utilisez ${form.email} pour vous connecter et votre mot de passe.`
+          `Utilisez ${form.email} pour vous connecter et votre mot de passe.`,
         );
         router.push("/sign-in");
       }
@@ -107,6 +139,17 @@ const SignUp = () => {
             formInputStyle={""}
             keyboardType="phone"
           />
+
+          <FormFieldSelection
+            title="Pays"
+            value={form.country}
+            placeholder="Sélectionnez votre pays"
+            handleChange={(country) => setForm({ ...form, country })}
+            options={countries}
+            otherStyles="mt-4"
+            formInputStyle=""
+          />
+
           <FormField
             title="Adresse email (Facultatif)"
             value={form.email}
@@ -146,6 +189,21 @@ const SignUp = () => {
             buttonStyle="bg-secondary rounded-xl h-12 px-4  flex  justify-center items-center"
             textStyles="text-primary text-white font-Iblack block w-full text-xl"
             isLoading={isSubmitting}
+          />
+
+          <CustomButton
+            title="Continuer avec Google"
+            handlePress={() => promptAsync()}
+            containerStyles="w-full mt-3"
+            buttonStyle="bg-white border border-secondary rounded-xl h-12 px-4 flex justify-center items-center"
+            textStyles="text-secondary font-Iblack block w-full text-xl"
+            leftIcon={
+              <Image
+                source={images.google}
+                style={{ width: 24, height: 24, marginRight: 8 }}
+              />
+            }
+            disabled={!request}
           />
 
           <View className="flex justify-center pt-5 flex-row gap-2">

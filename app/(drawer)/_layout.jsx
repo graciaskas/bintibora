@@ -7,7 +7,7 @@ import HeaderRightButtons from "../../components/HeaderRightButtons";
 import "react-native-reanimated";
 import { Ionicons } from "@expo/vector-icons";
 
-const DrawerLayout = () => {
+export default function DrawerLayout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer
@@ -36,6 +36,4 @@ const DrawerLayout = () => {
       />
     </GestureHandlerRootView>
   );
-};
-
-export default DrawerLayout;
+}

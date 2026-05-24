@@ -28,6 +28,16 @@ const GlobalProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // Gestion du thème (clair/sombre)
+  const [theme, setTheme] = useState(null); // null = auto, "light" ou "dark"
+  const toggleTheme = () => {
+    setTheme((prev) => {
+      if (prev === "light") return "dark";
+      if (prev === "dark") return "light";
+      return "dark";
+    });
+  };
+
   //DatePickerModal state variables
   const [selectedDate, setSelectedDate] = useState("");
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
@@ -156,6 +166,9 @@ const GlobalProvider = ({ children }) => {
         loading,
         refreshing,
         setRefreshing,
+        theme,
+        setTheme,
+        toggleTheme,
       }}
     >
       {children}
